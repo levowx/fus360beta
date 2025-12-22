@@ -1,32 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>levowx`s archive</title>
+  <title>Archive</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-  <header>
-    <div class="logo">levowx`s archive (fusion 360 beta tester web)</div>
-    </div>
-  </header>
-
-  <div class="text-large">homepage</div>
-
-    <style>
+  <style>
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
-      background-color: #44115c; 
+      background-color: #44115c;
       font-family: 'Share Tech Mono', monospace;
-      font-weight: bold; 
-      color: #00ff00; 
+      font-weight: bold;
+      color: #00ff00;
     }
 
     header {
-      position: relative; 
-      z-index: 10;      
+      position: relative;
+      z-index: 10;
       background-color: #000;
       display: flex;
       justify-content: space-between;
@@ -36,17 +29,124 @@
 
     header .logo {
       font-size: 24px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100% - 60px);
+    }
+
+    textarea {
+      width: 70%;
+      height: 300px;
+      background-color: transparent;
+      border: 2px solid #00ff00;
+      color: #00ff00;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 16px;
+      font-weight: normal;
+      padding: 15px;
+      resize: none;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ARCHIVE</div>
+    </div>
+  </header>
+
+  <!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kod Giriş</title>
+
+  <!-- Share Tech Mono fontu -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* ARKA PLAN SİLİNDİ */
+      background: transparent;
+
+      font-family: 'Share Tech Mono', monospace;
       font-weight: bold;
     }
 
-    header .search-container input {
-      padding: 5px 10px;
-      border-radius: 4px;
-      border: none;
-      font-weight: bold;
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 14px;
+    .container {
+      display: flex;
+      gap: 10px;
     }
+
+    input {
+      padding: 12px;
+      font-size: 16px;
+      width: 220px;
+
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: bold;
+
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: transparent;
+    }
+
+    button {
+      padding: 12px 18px;
+      font-size: 16px;
+
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: bold;
+
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+
+      background: transparent;
+      color: #000;
+      border: 1px solid #000;
+    }
+
+    button:hover {
+      background: rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <input id="code" maxlength="5" placeholder="KOD GİR">
+    <button onclick="go()">ENTER</button>
+  </div>
+
+  <script>
+    const codes = {
+      "A9F3Q": "https://example.com",
+      "X2K7M": "https://google.com"
+    };
+
+    function go() {
+      const input = document.getElementById("code").value.toUpperCase();
+      if (codes[input]) {
+        window.location.href = codes[input];
+      } else {
+        alert("GEÇERSİZ KOD");
+      }
+    }
+  </script>
 
 </body>
 </html>
+
