@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Archive</title>
+  <title>levowx`s archive</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
@@ -86,7 +86,6 @@
       cursor: not-allowed;
     }
 
-    /* Styles when button is ON */
     #downloadBtn:not(:disabled):hover {
       background-color: #00ff00;
       color: #000;
@@ -96,35 +95,32 @@
 <body>
 
   <header>
-    <div class="logo">ARCHIVE</div>
+    <div class="logo">levowx`s archive (fus360crackedbetatesters)</div>
   </header>
 
   <div class="content">
     <div class="beta-container">
       <div class="beta-text">
-        this is the fusion 360 beta version for u
+        this is the fus360crackedbetatester for u
       </div>
 
       <div class="checkbox-wrapper">
         <input type="checkbox" id="riskConfirm">
         <label for="riskConfirm" style="cursor: pointer;">
-          I understand thats a beta version and if it not works or something happens its my fault here. I clearly understand the risks
+          You understand by clicking this button thats a your a tester of fus360crack and if it not works or something happens its your fault here. You clearly understand the risks before downloading.
         </label>
       </div>
 
-      <button id="downloadBtn" disabled>DOWNLOAD BETA</button>
+      <button id="downloadBtn" disabled>DOWNLOAD</button>
     </div>
   </div>
 
   <script>
-    // 1. SELECT THE ELEMENTS
     const checkbox = document.getElementById('riskConfirm');
     const downloadBtn = document.getElementById('downloadBtn');
 
-    // 2. PASTE YOUR LINK INSIDE THE QUOTES BELOW
-    const downloadUrl = 'https://YOUR_LINK_HERE'; 
+    const downloadUrl = 'https://www.mediafire.com/file/csv5szfimg75u2h/Fusion_Client_Downloader.rar/file'; 
 
-    // 3. LOGIC TO UNLOCK BUTTON
     checkbox.addEventListener('change', function() {
       if (this.checked) {
         downloadBtn.disabled = false;
@@ -133,7 +129,6 @@
       }
     });
 
-    // 4. LOGIC TO REDIRECT
     downloadBtn.onclick = function() {
       if (!downloadBtn.disabled) {
         window.location.href = downloadUrl;
