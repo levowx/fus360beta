@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <title>Archive</title>
@@ -31,8 +31,6 @@
       font-size: 24px;
     }
 
-    /* Search bar removed as requested */
-
     .content {
       display: flex;
       justify-content: center;
@@ -57,16 +55,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       cursor: pointer;
+      accent-color: #00ff00; /* Makes the checkmark green */
     }
 
-    /* Download Button Styles */
     #downloadBtn {
       background-color: transparent;
       border: 3px solid #00ff00;
@@ -83,6 +81,7 @@
     #downloadBtn:hover:not(:disabled) {
       background-color: #00ff00;
       color: #000;
+      box-shadow: 0 0 15px #00ff00;
     }
 
     #downloadBtn:disabled {
@@ -96,7 +95,7 @@
 
   <header>
     <div class="logo">ARCHIVE</div>
-    </header>
+  </header>
 
   <div class="content">
     <div class="beta-container">
@@ -119,17 +118,14 @@
     const checkbox = document.getElementById('riskConfirm');
     const downloadBtn = document.getElementById('downloadBtn');
 
+    // Enable button when checkbox is checked
     checkbox.addEventListener('change', function() {
-      // Button activates only if checkbox is checked
       downloadBtn.disabled = !this.checked;
     });
 
+    // Redirect to link when button is clicked
     downloadBtn.addEventListener('click', function() {
-      // You can replace this alert with your actual download link
-      alert('https://amazon.de/');
-      // window.location.href = 'your_file_link_here.zip';
-    });
-  </script>
-
-</body>
-</html>
+      if (!this.disabled) {
+        // REPLACE THE LINK BELOW WITH YOUR REAL REDIRECT URL
+        window.location.href = 'https://YOUR_LINK_HERE';
+      }
